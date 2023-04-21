@@ -30,7 +30,7 @@ if sub:
     ts=datetime.datetime.now()
     df=pd.DataFrame([[NPS,star,xf,ts]],columns=['NPS','Star','Feature','Completion'])
     df.to_sql('response',conn,if_exists='append',index=False)
-    #SAA.main()
+    SAA.main()
     st.write(df)
 wd=getcwd()
 st.write(wd)
