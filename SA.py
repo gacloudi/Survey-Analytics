@@ -29,7 +29,7 @@ if sub:
     df=pd.DataFrame([[NPS,star,xf,ts]],columns=['NPS','Star','Feature','Completion'])
     df.to_sql('response',conn,if_exists='append',index=False)
     #SAA.main()
-st.write(df)
+    st.write(df)
 # q="SELECT * FROM response" 
 # c.execute(q)
 # data = c.fetchall()
