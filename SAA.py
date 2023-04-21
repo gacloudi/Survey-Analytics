@@ -1,4 +1,5 @@
 import pandas as pd
+from os import getcwd
 import streamlit as st
 from streamlit_option_menu import option_menu
 import sqlite3
@@ -28,3 +29,5 @@ st.download_button(
     "text/csv",
     key="download-tools-csv",
 )
+wd=getcwd()
+st.write(wd)
