@@ -31,13 +31,15 @@ if sub:
     df.to_sql('response',conn,if_exists='append',index=False)
     #SAA.main()
     st.write(df)
-c=getcwd()
-st.write(c)
+wd=getcwd()
+st.write(wd)
 
-# q="SELECT * FROM response" 
-# c.execute(q)
-# data = c.fetchall()
-# #st.write(data)
+
+
+q="SELECT * FROM response" 
+c.execute(q)
+data = c.fetchall()
+st.write(data)
 # clean_db = pd.DataFrame(data,columns=["NPS", "Feature","Completion"])
 # x1=clean_db['NPS'].sum()
 # x2=clean_db['Feature'].value_counts()
