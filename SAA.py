@@ -9,7 +9,7 @@ import os.path
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 db_dir = (BASE_DIR + '/response.db')
 #conn= sqlite3.connect(db_dir,check_same_thread=False)
-conn = sqlite3.connect('response.db', check_same_thread=False)
+conn = sqlite3.connect('response.db')
 c = conn.cursor()
 wd=getcwd()
 st.write(wd)
