@@ -31,7 +31,7 @@ if sub:
     df.to_sql('response',conn,if_exists='append',index=False)
     #SAA.main()
     st.write(df)
-c=getwd()
+c=getcwd()
 st.write(c)
 
 # q="SELECT * FROM response" 
