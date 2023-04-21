@@ -6,7 +6,8 @@ import sqlite3
 import datetime
 conn = sqlite3.connect('response.db', check_same_thread=False)
 c = conn.cursor()
-
+wd=getcwd()
+st.write(wd)
 
 q="SELECT * FROM response" 
 c.execute(q)
@@ -29,5 +30,4 @@ st.download_button(
     "text/csv",
     key="download-tools-csv",
 )
-wd=getcwd()
-st.write(wd)
+
