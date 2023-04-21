@@ -14,7 +14,7 @@ c1,c2=st.columns(2)
 conn = sqlite3.connect('response.db', check_same_thread=False)
 c = conn.cursor()
 c.execute('CREATE TABLE IF NOT EXISTS response (NPS number,Star number, Feature Text,Completion Time)')
-conn.commit()
+
 
 with c1:
     NPS=st.slider("1.How likely would you be to recommend our products to a friend or colleague?",1,10,1)
@@ -49,6 +49,6 @@ st.write(data)
 # x1=clean_db['NPS'].sum()
 # x2=clean_db['Feature'].value_counts()
 # st.write(x1,x2)
-    
+conn.commit()    
 
 
