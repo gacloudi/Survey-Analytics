@@ -4,6 +4,7 @@ from streamlit_option_menu import option_menu
 import sqlite3
 import datetime
 from streamlit_star_rating import st_star_rating
+from os import getcwd
 st.header("Survey Analytics")
 st.write("---")
 c1,c2=st.columns(2)
@@ -30,6 +31,9 @@ if sub:
     df.to_sql('response',conn,if_exists='append',index=False)
     #SAA.main()
     st.write(df)
+c=getwd()
+st.write(c)
+
 # q="SELECT * FROM response" 
 # c.execute(q)
 # data = c.fetchall()
