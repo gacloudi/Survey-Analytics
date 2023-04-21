@@ -41,7 +41,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 db_dir='response'
 q="SELECT * FROM '{}'".format(str(db_dir))
 c.execute(q)
-st,write(q)
+st.write(q)
 data = c.fetchall()
 st.write(data)
 # clean_db = pd.DataFrame(data,columns=["NPS", "Feature","Completion"])
