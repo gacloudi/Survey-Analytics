@@ -34,9 +34,10 @@ if sub:
 wd=getcwd()
 st.write(wd)
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+db_dir = (BASE_DIR + '/response')
 
-
-q="SELECT * FROM response" 
+q="SELECT * FROM '{}'".format(db_dir)
 c.execute(q)
 data = c.fetchall()
 st.write(data)
