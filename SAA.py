@@ -14,7 +14,7 @@ c = conn.cursor()
 wd=getcwd()
 st.write(wd)
 
-q="SELECT * FROM response" 
+q="SELECT * FROM db_dir" 
 c.execute(q)
 data = c.fetchall()
 #st.write(data)
