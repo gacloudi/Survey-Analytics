@@ -17,7 +17,7 @@ st.write(wd)
 #q="SELECT * FROM '{}'".format(str(db_dir))
 db_dir='response'
 #q="SELECT * FROM '{}'".format(str(db_dir))
-q="SELECT * FROM response"
+q="SELECT * FROM 'response'"
 st.write(q)
 c.execute(q)
 data = c.fetchall()
